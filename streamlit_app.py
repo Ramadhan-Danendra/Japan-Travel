@@ -7,7 +7,6 @@ st.write('*Select your traveling preferences*')
 
 type = st.multiselect("What kind of places do you prefer?", ["Urban", "Culture", "Nature", "Amusement Park"])
 st.caption("_'Culture'_ includes castle, shrine, temple, and historical museum")
-time = st.multiselect("When will you probably visit Japan?", ["Urban", "Culture", "Nature", "Amusement Park"])
 
-month = ['January','February','March','April','May','June','July','August','September','October','November','December']
-time = st.segmented_control("Months", month, selection_mode="multi")
+months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+month = st.segmented_control("What month you probably visit Japan?", months, selection_mode="multi")
