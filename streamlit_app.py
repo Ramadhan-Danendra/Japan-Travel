@@ -10,10 +10,11 @@ st.caption("_'Culture'_ includes castle, shrine, temple, and historical museum")
 
 months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 month = st.segmented_control("What month will you probably visit Japan?", months, selection_mode="multi")
-SeasonTable = [['Mar - May','Jun - Aug','Sep - Early Dec','Dec - Feb'],['spring','summer','autumn','winter']]
-with st.expander("See seasons guide"):
+
+SeasonTable = [['Month:','Mar - May','Jun - Aug','Sep - Early Dec','Dec - Feb'],['Season','spring','summer','autumn','winter']]
+with st.expander("*See seasons and timing guide*"):
   st.table(SeasonTable, width="content")
-  st.write('''Important times (exact times depend on location) \n
+  st.write('''**Important times (exact times depend on location)** \n
   Cherry blossom: late March - late April \n
   Rainy season: Mid May - Mid July \n
   Monsoon season: September \n
