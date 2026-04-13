@@ -6,13 +6,13 @@ st.divider()
 st.write('*Select your traveling preferences*')
 
 type = st.multiselect("What kind of places do you prefer?", ["Urban", "Culture", "Nature", "Amusement Park"])
-st.caption("_'Culture'_ includes castle, shrine, temple, and historical museum")
+st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and other historical places")
 
 months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 month = st.segmented_control("What month will you probably visit Japan?", months, selection_mode="multi")
 
 SeasonTable = [['Month:','Mar - May','Jun - Aug','Sep - Early Dec','Dec - Feb'],['Season:','spring','summer','autumn','winter']]
-with st.expander("*See seasons and timing guide*"):
+with st.expander("*see seasons and timing guide*"):
   st.table(SeasonTable, width="content")
   st.write('''**Important times (exact times depend on location)** \n
   Cherry blossom: late March - late April \n
