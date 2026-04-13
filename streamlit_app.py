@@ -9,3 +9,5 @@ type = st.multiselect("What kind of places do you prefer?", ["Urban", "Culture",
 st.caption("_'Culture'_ includes castle, shrine, temple, and historical museum")
 time = st.multiselect("When will you probably visit Japan?", ["Urban", "Culture", "Nature", "Amusement Park"])
 
+month = ['January','February','March','April','May','June','July','August','September','October','November','December']
+time = st.segmented_control("Months", month, selection_mode="multi")
