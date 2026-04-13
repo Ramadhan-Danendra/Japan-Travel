@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.title('Your Personal Japan Itinerary')
+st.divider()
 st.write('*Select your traveling preferences*')
 
 st.write('What kind of places do you prefer?')
@@ -19,4 +20,12 @@ winter = st.checkbox("Winter")
 
 A = [spring,summer,autumn,winter]
 for i in A:
+    st.write(i);
+
+type = st.multiselect(
+    "What kind of places do you prefer?",
+    ["Urban", "Culture", "Nature", "Park"])
+
+st.write(type)
+for i in type:
     st.write(i);
