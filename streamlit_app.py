@@ -12,7 +12,7 @@ type = st.pills('you can choose more than one', ["Urban", "Culture", "Nature", "
 st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and other historical places")
 
 # Time
-st.write('\n What month will you probably visit Japan?')
+st.write('What month will you probably visit Japan?')
 months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 month = st.segmented_control('you can choose more than one', months, selection_mode="multi")
 
@@ -27,16 +27,16 @@ with st.expander("*see season and timing guide*"):
   ''')
 
 # Region
-st.write('\n')
 RC1, RC2 = st.columns(2)
 with RC1:
-  region = st.multiselect("Do you have regions that you want to visit?", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai / South Chubu (South of Central Japan)", "Hokuriku / North Chubu (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
+  st.write('Do you have regions that you want to visit?')
+  region = st.multiselect("you can choose more than one", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai / South Chubu (South of Central Japan)", "Hokuriku / North Chubu (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
 with RC2:
   with st.expander('*see regions map*'):
     st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
 
 # Additional option
-tokyo = st.toggle('Include Tokyo in itinerary')
+tokyo = st.toggle('Include Tokyo in itinerary', value=True)
 
 
 
