@@ -21,4 +21,9 @@ with st.expander("*See seasons and timing guide*"):
   Autumn/fall foliage: Late Oct - Early Dec \n
   ''')
 
-region = st.multiselect("Do you have regions that you want to visit?", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai (South of Central Japan)", "Hokuriku (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
+RC1, RC2 = st.columns(2)
+with RC1:
+  region = st.multiselect("Do you have regions that you want to visit?", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai (South of Central Japan)", "Hokuriku (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
+with RC2:
+  with st.expander('*see regions map*'):
+    st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
