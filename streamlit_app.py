@@ -6,5 +6,6 @@ st.divider()
 st.write('*Select your traveling preferences*')
 
 type = st.multiselect("What kind of places do you prefer?", ["Urban", "Culture", "Nature", "Amusement Park"])
+st.caption("Culture includes castle, shrine, temple, and historical museum")
 time = st.multiselect("When will you probably visit Japan?", ["Urban", "Culture", "Nature", "Amusement Park"])
 
