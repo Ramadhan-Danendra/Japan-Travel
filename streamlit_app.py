@@ -12,6 +12,7 @@ type = st.pills('*you can choose more than one*', ["Urban", "Culture", "Nature",
 st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and other historical places")
 
 # Time
+st.write(' ')
 st.write('What month will you probably visit Japan?')
 months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 month = st.segmented_control('*you can choose more than one*', months, selection_mode="multi")
@@ -27,6 +28,7 @@ with st.expander("*see season and timing guide*"):
   ''')
 
 # Region
+st.write(' ')
 RC1, RC2 = st.columns(2)
 with RC1:
   st.write('Do you have regions that you want to visit?')
@@ -36,9 +38,11 @@ with RC2:
     st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
 
 # Additional option
+st.write(' ')
 tokyo = st.toggle('Include Tokyo in itinerary', value=True)
 
 # Final
+st.write(' ')
 st.write('Ready to see your itineraries?')
 filt = st.button('see itineraries', type='primary')
 
