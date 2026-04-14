@@ -15,7 +15,7 @@ st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and oth
 st.write(' ')
 st.write('What month will you probably visit Japan?')
 month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-monthU = st.segmented_control('*you can choose more than one*', months, selection_mode="multi")
+monthU = st.segmented_control('*you can choose more than one*', month, selection_mode="multi")
 
 SeasonTable = [['Month:','Mar - May','Jun - Aug','Sep - Early Dec','Dec - Feb'],['Season:','spring','summer','autumn','winter']]
 with st.expander("*see season and timing guide*"):
