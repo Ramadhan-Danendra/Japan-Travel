@@ -15,7 +15,7 @@ st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and oth
 
 
 # Time
-st.write('##')
+st.write('#####')
 st.write('What month will you probably visit Japan?')
 month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 monthU = st.segmented_control('*you can choose more than one*', month, selection_mode="multi")
@@ -50,7 +50,7 @@ if 'Oct' in monthU or 'Nov' in monthU or 'Dec' in monthU:
   
 
 # Region
-st.write('###')
+st.write('#####')
 RC1, RC2 = st.columns(2)
 with RC1:
   st.write('Do you have regions that you want to visit?')
@@ -60,7 +60,7 @@ with RC2:
     st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
 
 # Additional option
-st.write('####')
+st.write('#####')
 tokyoU = st.toggle('Include Tokyo in itinerary', value=True)
 
 # Final
