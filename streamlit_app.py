@@ -26,6 +26,15 @@ with st.expander("*see season and timing guide*"):
   Monsoon season: September \n
   Autumn/fall foliage: Late Oct - Early Dec \n
   ''')
+if 'Mar' or 'Apr' in month:
+  st.write('You have a chance to see cherry blossom in Japan!')
+  CB = []
+  if 'Mar' in month: CB += ['Early-Mid Mar','Late Mar']
+  if 'Apr' in month: CB += ['Early Apr','Mid Apr','Late Apr']
+  cb = st.segmented_control('Do you have the detailed times?', CB, selection_mode="multi")
+  if 'Early-Mid Mar' in cb:
+    st.write('*sorry you cannot see cherry blossom in early-mid March*')
+  
 
 # Region
 st.write(' ')
