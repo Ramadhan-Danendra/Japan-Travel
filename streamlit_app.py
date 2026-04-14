@@ -26,7 +26,7 @@ with st.expander("*see season and timing guide*"):
   Monsoon season: September \n
   Autumn/fall foliage: Late Oct - Early Dec \n
   ''')
-if 'Mar' or 'Apr' in month:
+if 'Mar' in month:
   st.write('You have a chance to see cherry blossom in Japan!')
   CB = []
   if 'Mar' in month: CB += ['Early-Mid Mar','Late Mar']
