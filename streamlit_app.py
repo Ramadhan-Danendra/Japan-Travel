@@ -42,7 +42,7 @@ if 'Mar' in monthU or 'Apr' in monthU:
 if 'Oct' in monthU or 'Nov' in monthU or 'Dec' in monthU:
   st.write('You have a chance to see fall foliage in Japan!')
   FF = []
-  for i in ['Oct','Nov,'Dec']:
+  for i in ['Oct','Nov','Dec']:
     if i in monthU: FF += ['Early '+i,'Mid '+i,'Late '+i]
   ffU = st.segmented_control('Do you have the detailed times?', FF, selection_mode="multi")
   if 'Late Dec' in ffU:
