@@ -45,7 +45,7 @@ if 'Oct' in monthU or 'Nov' in monthU or 'Dec' in monthU:
   for i in ['Oct','Nov,'Dec']:
     if i in monthU: FF += ['Early '+i,'Mid '+i,'Late '+i]
   ffU = st.segmented_control('Do you have the detailed times?', FF, selection_mode="multi")
-  if 'Late Dec' in cbU:
+  if 'Late Dec' in ffU:
     st.caption('*sorry you cannot see fall foliage in late December*')
   
 
