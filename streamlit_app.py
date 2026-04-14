@@ -1,18 +1,21 @@
 import streamlit as st
 import pandas as pd
 
+
 # Header
 st.title('Your Personal Japan Itinerary')
 st.divider()
 st.write('*Select your traveling preferences*')
+
 
 # Place
 st.write('What kind of places do you prefer?')
 typeU = st.pills('*you can choose more than one*', ["Urban", "Culture", "Nature", "Amusement Park"], selection_mode="multi")
 st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and other historical places")
 
+
 # Time
-st.write(' ')
+st.write('#')
 st.write('What month will you probably visit Japan?')
 month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 monthU = st.segmented_control('*you can choose more than one*', month, selection_mode="multi")
@@ -35,10 +38,19 @@ if 'Mar' in monthU or 'Apr' in monthU:
   cbU = st.segmented_control('Do you have the detailed times?', CB, selection_mode="multi")
   if 'Early-Mid Mar' in cbU:
     st.caption('*sorry you cannot see cherry blossom in early-mid March*')
+
+if 'Oct' in monthU or 'Nov' in monthU or 'Dec' in monthU:
+  st.write('You have a chance to see fall foliage in Japan!')
+  FF = []
+  for i in ['Oct','Nov,'Dec']:
+    if i in monthU: FF += ['Early '+i,'Mid '+i,'Late '+i]
+  ffU = st.segmented_control('Do you have the detailed times?', FF, selection_mode="multi")
+  if 'Late Dec' in cbU:
+    st.caption('*sorry you cannot see fall foliage in late December*')
   
 
 # Region
-st.write(' ')
+st.write('#')
 RC1, RC2 = st.columns(2)
 with RC1:
   st.write('Do you have regions that you want to visit?')
@@ -48,11 +60,11 @@ with RC2:
     st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
 
 # Additional option
-st.write(' ')
+st.write('#')
 tokyoU = st.toggle('Include Tokyo in itinerary', value=True)
 
 # Final
-st.write(' ')
+st.write('#')
 st.write('Ready to see your itineraries?')
 filt = st.button('see itineraries', type='primary')
 
