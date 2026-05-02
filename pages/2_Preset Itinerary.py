@@ -76,8 +76,7 @@ with RC2:
 # Duration
 st.write('#####')
 st.write('How long will you stay in Japan?')
-Duration = st.pills(['7 days', '10 days', '14 days'])
-st.caption('This includes your arrival and departure day')
+Duration = st.pills('This includes your arrival and departure day', ['7 days', '10 days', '14 days'])
 st.write('Want to set custom duration? Check the custom itinerary or the automatically generated itinerary')
 
 
