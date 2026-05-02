@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(
-  page_title = "Japan Itinerary"
+  page_title='Japan Itinerary'
   page_icon = "🎴"
 )
 
