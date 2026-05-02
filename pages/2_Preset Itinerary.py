@@ -4,7 +4,7 @@ import pandas as pd
 
 # Header
 st.title('Preset Itinerary')
-st.write('*Find your personalized itinerary from our custom preset itinerary*')
+st.write('*Find your personalized itinerary from our custom, preset itinerary*')
 st.divider()
 dicti = {}
 
@@ -12,13 +12,13 @@ dicti = {}
 # Place
 dicti['Urban'] = ['urban area', 'modern art museum', 'city view']
 dicti['Culture'] = ['castle', 'Shinto shrine', 'Buddha temple', 'historical place']
-dicti['Nature'] = ['mountains', 'river', 'lake', 'snow', 'Japanese garden']
+dicti['Nature'] = ['mountains', 'river/gorge', 'lake', 'snow', 'Japanese garden', 'flower park']
 dicti['Amusement Park'] = ['DisneyLand, Tokyo', 'DisneySea, Tokyo', 'Universal Studio, Osaka']
 def TypeDetail (TDi):
     TDu = st.pills(TDi+': *(you can choose more than one)*', dicti[TDi], selection_mode="multi")
     return(TDu)
 
-st.write('What kind of places do you prefer?')
+st.write('**What kind of places do you want to visit?**')
 Type = st.pills('*you can choose more than one*', ['Urban', 'Culture', 'Nature', 'Amusement Park'], selection_mode="multi")
 st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and other historical places")
 
@@ -29,7 +29,7 @@ for i in Type:
 
 # Time
 st.write('#####')
-st.write('What month will you probably visit Japan?')
+st.write('**What month will you probably visit Japan?**')
 month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 monthU = st.segmented_control('*you can choose more than one*', month, selection_mode="multi")
 
@@ -66,7 +66,7 @@ if 'Oct' in monthU or 'Nov' in monthU or 'Dec' in monthU:
 st.write('#####')
 RC1, RC2 = st.columns(2)
 with RC1:
-  st.write('Do you have regions that you want to visit?')
+  st.write('**Do you have regions that you want to visit?**')
   regionU = st.multiselect("*you can choose more than one*", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai / South Chubu (South of Central Japan)", "Hokuriku / North Chubu (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
 with RC2:
   with st.expander('*see regions map*'):
@@ -75,7 +75,7 @@ with RC2:
 
 # Duration
 st.write('#####')
-st.write('How long will you stay in Japan?')
+st.write('**How long will you stay in Japan?**')
 Duration = st.segmented_control('This includes your arrival and departure day', ['7 days', '10 days', '14 days'])
 st.write('Want to set custom duration? Check the custom itinerary or the automatically generated itinerary')
 
