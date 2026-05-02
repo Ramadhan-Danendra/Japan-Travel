@@ -12,17 +12,17 @@ urban = ['urban area', 'modern art museum', 'city view']
 culture = ['castle', 'Shinto shrine', 'Buddha temple', 'historical place']
 nature = ['mountains', 'river', 'lake', 'snow', 'Japanese garden']
 ap = ['DisneyLand, Tokyo', 'DisneySea, Tokyo', 'Universal Studio, Osaka']
-def TypeDetail (TDi):
-    TDu = st.pills(TDi+': *you can choose more than one*', TDi, selection_mode="multi")
+def TypeDetail (TDi, TDj):
+    TDu = st.pills(TDj+': *you can choose more than one*', TDi, selection_mode="multi")
     return(TDu)
 
 st.write('What kind of places do you prefer?')
 Type = st.pills('*you can choose more than one*', ['Urban', 'Culture', 'Nature', 'Amusement Park'], selection_mode="multi")
 st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and other historical places")
-if 'Urban' in Type: Urban = TypeDetail(urban)
-if 'Culture' in Type: Culture = TypeDetail(culture)
-if 'Nature' in Type: Nature = TypeDetail(nature)
-if 'Amusement Park' in Type: AP = TypeDetail(ap)
+if 'Urban' in Type: Urban = TypeDetail(urban, 'Urban')
+if 'Culture' in Type: Culture = TypeDetail(culture, 'Culture')
+if 'Nature' in Type: Nature = TypeDetail(nature, 'Nature')
+if 'Amusement Park' in Type: AP = TypeDetail(ap, "Amusement Park")
 
 
 # Time
