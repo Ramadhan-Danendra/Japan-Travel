@@ -1,17 +1,19 @@
 import streamlit as st
 import pandas as pd
 
+
 # Header
 st.title('Preset Itinerary')
 st.write('*Find your personalized itinerary from our custom preset itinerary*')
 st.divider()
 dicti = {}
 
+
 # Place
 dicti['Urban'] = ['urban area', 'modern art museum', 'city view']
 dicti['Culture'] = ['castle', 'Shinto shrine', 'Buddha temple', 'historical place']
 dicti['Nature'] = ['mountains', 'river', 'lake', 'snow', 'Japanese garden']
-dicti['Amussement Park'] = ['DisneyLand, Tokyo', 'DisneySea, Tokyo', 'Universal Studio, Osaka']
+dicti['Amusement Park'] = ['DisneyLand, Tokyo', 'DisneySea, Tokyo', 'Universal Studio, Osaka']
 def TypeDetail (TDi):
     TDu = st.pills(TDi+': *(you can choose more than one)*', dicti[TDi], selection_mode="multi")
     return(TDu)
@@ -23,11 +25,6 @@ st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and oth
 TD = []
 for i in Type:
     TD.extend(TypeDetail(i))
-
-#if 'Urban' in Type: Urban = TypeDetail(urban, 'Urban')
-#if 'Culture' in Type: Culture = TypeDetail(culture, 'Culture')
-#if 'Nature' in Type: Nature = TypeDetail(nature, 'Nature')
-#if 'Amusement Park' in Type: AP = TypeDetail(ap, "Amusement Park")
 
 
 # Time
@@ -74,6 +71,15 @@ with RC1:
 with RC2:
   with st.expander('*see regions map*'):
     st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
+
+
+# Duration
+st.write('#####')
+st.write('How long will you stay in Japan?')
+Duration = st.pills(['7 days', '10 days', '14 days'])
+st.caption('This includes your arrival and departure day')
+st.write('Want to set custom duration? Check the custom itinerary or the automatically generated itinerary')
+
 
 # Additional option
 st.write('#####')
