@@ -21,11 +21,8 @@ st.write('**What kind of places do you want to visit?**')
 Type = st.pills('*you can choose more than one*', ['Urban', 'Culture', 'Nature', 'Amusement Park'], selection_mode="multi")
 st.caption("_'Culture'_ includes castle, shrine, temple, history museum, and other historical places")
 
-TypeTD = Type
-if 'Urban' in TypeTD: TypeTD.remove('Urban')
-TD = []
-for i in TypeTD:
-    TD.extend(TypeDetail(i))
+if 'Amusement Park' in Type:
+  TD = TypeDetail('Amusement Park')
 
 
 # Time
