@@ -32,7 +32,7 @@ for i in TypeTD:
 st.write('#####')
 st.write('**What month will you probably visit Japan?**')
 month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-monthU = st.segmented_control('*you can choose more than one*', month, selection_mode="multi")
+Month = st.segmented_control('*you can choose more than one*', month, selection_mode="multi")
 
 SeasonTable = [['Month:','Mar - May','Jun - Aug','Sep - Early Dec','Dec - Feb'],['Season:','spring','summer','autumn','winter']]
 with st.expander("*see season and timing guide*"):
@@ -44,22 +44,23 @@ with st.expander("*see season and timing guide*"):
   Autumn/fall foliage: Late Oct - Early Dec \n
   ''')
 
-if 'Mar' in monthU or 'Apr' in monthU:
+if 'Mar' in Month or 'Apr' in Month or 'May' in Month:
   st.write('You have a chance to see cherry blossom in Japan!')
-  CB = []
-  if 'Mar' in monthU: CB += ['Early-Mid Mar','Late Mar']
-  if 'Apr' in monthU: CB += ['Early Apr','Mid Apr','Late Apr']
-  cbU = st.segmented_control('Do you have the detailed times?', CB, selection_mode="multi")
-  if 'Early-Mid Mar' in cbU:
-    st.caption('*sorry you cannot see cherry blossom in early-mid March*')
+  cb = []
+  if 'Mar' in Month: cb += ['Early-Mid Mar','Late Mar']
+  if 'Apr' in Month: cb += ['Early Apr','Mid Apr','Late Apr']
+  if 'May' in Month: cb += ['Early May','Mid-Late May']
+  CB = st.segmented_control('Do you have the detailed times?', cb, selection_mode="multi")
+  if 'Early-Mid Mar' in CB or 'Mid-Late May' in CB:
+    st.caption('*sorry you cannot see cherry blossom in early-mid March or mid-late May*')
 
-if 'Oct' in monthU or 'Nov' in monthU or 'Dec' in monthU:
+if 'Oct' in Month or 'Nov' in Month or 'Dec' in Month:
   st.write('You have a chance to see fall foliage in Japan!')
-  FF = []
+  ff = []
   for i in ['Oct','Nov','Dec']:
-    if i in monthU: FF += ['Early '+i,'Mid '+i,'Late '+i]
-  ffU = st.segmented_control('Do you have the detailed times?', FF, selection_mode="multi")
-  if 'Late Dec' in ffU:
+    if i in Month: ff += ['Early '+i,'Mid '+i,'Late '+i]
+  FF = st.segmented_control('Do you have the detailed times?', ff, selection_mode="multi")
+  if 'Late Dec' in FF:
     st.caption('*sorry you cannot see fall foliage in late December*')
   
 
