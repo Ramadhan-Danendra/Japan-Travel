@@ -84,11 +84,11 @@ st.write('Want to set custom duration? Check the custom itinerary or the automat
 # Difficulty
 st.write('#####')
 st.write('**Difficulty**')
-Difficulty = st.segmented_control('your maximum difficulty tolerance', ['Very easy', 'Easy', 'Medium', 'Hard'])
+Difficulty = st.segmented_control('your maximum difficulty tolerance', ['Very easy', 'Easy', 'Hard'])
 with st.container(border=True):
-  st.write('Very easy: super touristy place (Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka)) \n
+  st.write('''Very easy: super touristy place (Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka)) \n
            Easy: frequent public transport \n
-           Hard: rare/no public transport, long transport duration')
+           Hard: rare/no public transport, long transport duration''')
 
 
 # Additional option
