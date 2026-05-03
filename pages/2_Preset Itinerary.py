@@ -11,10 +11,10 @@ dicti = {}
 
 # Place
 dicti['Culture'] = ['castle', 'Shinto shrine', 'Buddha temple', 'historical place']
-dicti['Nature'] = ['mountains', 'river/gorge', 'lake', 'snow', 'Japanese garden', 'flower park']
+dicti['Nature'] = ['mountains', 'river/gorge', 'lake', 'beach/coast', 'snow', 'Japanese garden', 'flower park']
 dicti['Amusement Park'] = ['DisneyLand, Tokyo', 'DisneySea, Tokyo', 'Universal Studio, Osaka']
 def TypeDetail (TDi):
-    TDu = st.pills(TDi+': *(you can choose more than one)*', dicti[TDi], selection_mode="multi")
+    TDu = st.pills(TDi+' *(you can choose more than one)*:', dicti[TDi], selection_mode="multi")
     return(TDu)
 
 st.write('**What kind of places do you want to visit?**')
