@@ -9,9 +9,7 @@ st.divider()
 dicti = {}
 
 
-# Place
-dicti['Culture'] = ['castle', 'Shinto shrine', 'Buddha temple', 'historical place']
-dicti['Nature'] = ['mountains', 'river/gorge', 'lake', 'beach/coast', 'snow', 'Japanese garden', 'flower park']
+# Place
 dicti['Amusement Park'] = ['DisneyLand, Tokyo', 'DisneySea, Tokyo', 'Universal Studio, Osaka']
 def TypeDetail (TDi):
     TDu = st.pills(TDi+' *(you can choose more than one)*:', dicti[TDi], selection_mode="multi")
@@ -82,7 +80,7 @@ st.write('Want to set custom duration? Check the custom itinerary or the automat
 # Difficulty
 st.write('#####')
 st.write('**Difficulty**')
-Difficulty = st.segmented_control('*your maximum difficulty tolerancej', ['Very easy', 'Easy', 'Hard'])
+Difficulty = st.segmented_control('*your maximum difficulty tolerance*', ['Very easy', 'Easy', 'Hard'])
 with st.container(border=True):
   st.caption('''Very easy (recommended for first timer): super touristy place, including Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka) \n
   Easy: frequent public transport \n
