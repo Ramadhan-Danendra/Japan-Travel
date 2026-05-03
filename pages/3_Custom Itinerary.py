@@ -66,7 +66,7 @@ if 'Oct' in Month or 'Nov' in Month or 'Dec' in Month:
 # Duration
 st.write('#####')
 st.write('**How long will you stay in Japan?**')
-Duration = st.slider('Duration in days, including your arrival and departure day from Japan', min_value=5, max_value=21)
+Duration = st.slider('*Duration in days, including your arrival and departure day from Japan*', min_value=5, max_value=21)
 
 
 # Region
