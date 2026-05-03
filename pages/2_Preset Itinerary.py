@@ -81,6 +81,16 @@ Duration = st.segmented_control('This includes your arrival and departure day', 
 st.write('Want to set custom duration? Check the custom itinerary or the automatically generated itinerary')
 
 
+# Difficulty
+st.write('#####')
+st.write('**Difficulty**')
+Difficulty = st.segmented_control('your maximum difficulty tolerance', ['Very easy', 'Easy', 'Medium', 'Hard'])
+with st.container(border=True):
+  st.write('Very easy: super touristy place (Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka)) \n
+           'Easy: frequent public transport' \n
+           'Hard: rare/no public transport, long transport duration')
+
+
 # Additional option
 st.write('#####')
 tokyoU = st.toggle('Include Tokyo in itinerary', value=True)
