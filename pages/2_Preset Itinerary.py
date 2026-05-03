@@ -86,9 +86,9 @@ st.write('#####')
 st.write('**Difficulty**')
 Difficulty = st.segmented_control('your maximum difficulty tolerance', ['Very easy', 'Easy', 'Hard'])
 with st.container(border=True):
-  st.write('''Very easy: super touristy place (Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka))
-           Easy: frequent public transport
-           Hard: rare/no public transport, long transport duration''')
+  st.write('''Very easy: super touristy place (Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka)) \n
+  Easy: frequent public transport \n
+  Hard: rare/no public transport, long transport duration''')
 
 
 # Additional option
