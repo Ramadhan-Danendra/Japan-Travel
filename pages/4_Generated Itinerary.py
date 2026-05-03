@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Header
-st.title('Custom Itinerary')
+st.title('Automatically Generated Itinerary')
 st.write('*Unhappy with our preset itineraries? Unfamiliar with Japan geography? Just select your traveling preferences and let the algorithm generates itinerary for you!*')
 st.divider()
 dicti = {}
@@ -61,8 +61,7 @@ if 'Oct' in Month or 'Nov' in Month or 'Dec' in Month:
 # Duration
 st.write('#####')
 st.write('**How long will you stay in Japan?**')
-Duration = st.segmented_control('*This includes your arrival and departure day*', ['7 days', '10 days', '14 days'])
-st.write('Want to set custom duration? Check the custom itinerary or the automatically generated itinerary')
+Duration = st.slider('*Duration in days, including your arrival and departure day from Japan*', min_value=5, max_value=21)
 
 
 # Region
@@ -70,7 +69,8 @@ st.write('#####')
 RC1, RC2 = st.columns(2)
 with RC1:
   st.write('**Do you have regions that you want to visit?**')
-  Region = st.multiselect("*you can choose more than one*", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai / South Chubu (South of Central Japan)", "Hokuriku / North Chubu (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
+  regionU = st.multiselect("*you can choose more than one*", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai / South Chubu (South of Central Japan)", "Hokuriku / North Chubu (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
+  st.caption('To make your visit efficient (time-wise and budget-wise), we recommend to explore no more than one region every 3-4 days of your visit. Choosing regions only adjacent to each other also helps make your visit more efficient!')
 with RC2:
   with st.expander('*see regions map*'):
     st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
