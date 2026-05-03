@@ -57,7 +57,14 @@ if 'Oct' in Month or 'Nov' in Month or 'Dec' in Month:
   FF = st.segmented_control('Do you have the detailed times?', ff, selection_mode="multi")
   if 'Late Dec' in FF:
     st.caption('*sorry you cannot see fall foliage in late December*')
-  
+
+
+# Duration
+st.write('#####')
+st.write('**How long will you stay in Japan?**')
+Duration = st.segmented_control('*This includes your arrival and departure day*', ['7 days', '10 days', '14 days'])
+st.write('Want to set custom duration? Check the custom itinerary or the automatically generated itinerary')
+ 
 
 # Region
 st.write('#####')
@@ -67,14 +74,7 @@ with RC1:
   Region = st.multiselect("*you can choose more than one*", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai / South Chubu (South of Central Japan)", "Hokuriku / North Chubu (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
 with RC2:
   with st.expander('*see regions map*'):
-    st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
-
-
-# Duration
-st.write('#####')
-st.write('**How long will you stay in Japan?**')
-Duration = st.segmented_control('*This includes your arrival and departure day*', ['7 days', '10 days', '14 days'])
-st.write('Want to set custom duration? Check the custom itinerary or the automatically generated itinerary')
+    st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
 
 
 # Difficulty
