@@ -66,7 +66,7 @@ st.write('#####')
 RC1, RC2 = st.columns(2)
 with RC1:
   st.write('**Do you have regions that you want to visit?**')
-  regionU = st.multiselect("*you can choose more than one*", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai / South Chubu (South of Central Japan)", "Hokuriku / North Chubu (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
+  Region = st.multiselect("*you can choose more than one*", ["Hokkaido Island", "Tohoku (East Japan)", "Kanto (Greater Tokyo)", "Tokai / South Chubu (South of Central Japan)", "Hokuriku / North Chubu (North of Central Japan)", "Kansai (Greater Osaka-Kyoto)", "Chugoku (West Japan)", "Shikoku Island", "Kyushu Island"])
 with RC2:
   with st.expander('*see regions map*'):
     st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
@@ -75,16 +75,16 @@ with RC2:
 # Duration
 st.write('#####')
 st.write('**How long will you stay in Japan?**')
-Duration = st.segmented_control('This includes your arrival and departure day', ['7 days', '10 days', '14 days'])
+Duration = st.segmented_control('*This includes your arrival and departure day*', ['7 days', '10 days', '14 days'])
 st.write('Want to set custom duration? Check the custom itinerary or the automatically generated itinerary')
 
 
 # Difficulty
 st.write('#####')
 st.write('**Difficulty**')
-Difficulty = st.segmented_control('your maximum difficulty tolerance', ['Very easy', 'Easy', 'Hard'])
+Difficulty = st.segmented_control('*your maximum difficulty tolerancej', ['Very easy', 'Easy', 'Hard'])
 with st.container(border=True):
-  st.write('''Very easy (recommended for first timer): super touristy place, including Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka) \n
+  st.caption('''Very easy (recommended for first timer): super touristy place, including Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka) \n
   Easy: frequent public transport \n
   Hard: rare/no public transport, long transport duration''')
 
