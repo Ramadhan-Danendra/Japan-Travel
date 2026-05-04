@@ -80,6 +80,8 @@ with RC2:
   with st.expander('*see regions map*'):
     st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Regions_and_Prefectures_of_Japan.svg/3840px-Regions_and_Prefectures_of_Japan.svg.png')
 
+st.components.v1.iframe("https://www.google.com/maps/d/edit?mid=138-3NqgV3C79aEhKHId-sPNgskcHT70&usp=sharing")
+
 
 # Final
 st.write('#####')
