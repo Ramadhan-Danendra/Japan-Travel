@@ -11,7 +11,7 @@ st.title('Your Personal Japan Itinerary')
 st.divider()
 
 
-st.page_link('pages/2_Preset Itinerary.py', label = '###Preset Itinerary', icon=":material/alt_route:")
+st.page_link('pages/2_Preset Itinerary.py', label = ':blue-bagde[Preset Itinerary]', icon=":material/alt_route:")
 st.caption('*find your personalized itinerary from our custom preset itinerary*')
 
 st.page_link('pages/3_Custom Itinerary.py', label = '####Custom Itinerary', icon = ':material/conversion_path:')
