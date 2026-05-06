@@ -4,7 +4,7 @@ import pandas as pd
 
 # Header
 st.title('Preset Itinerary')
-st.write('*Find your personalized itinerary among our curated itinerary*')
+st.write('*Find your personalized itinerary among our curated itineraries*')
 st.divider()
 dicti = {}
 
