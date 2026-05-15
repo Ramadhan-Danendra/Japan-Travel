@@ -85,6 +85,17 @@ with RC2:
 st.components.v1.iframe("https://www.google.com/maps/d/embed?mid=138-3NqgV3C79aEhKHId-sPNgskcHT70&ehbc=2E312F&noprof=1", height=600)
 
 
+# Difficulty
+st.write('#####')
+st.write('**Difficulty**')
+Difficulty = st.segmented_control('*your maximum difficulty tolerance*', ['Very easy', 'Easy', 'Medium', 'Hard'])
+with st.container(border=True):
+  st.caption('''Very easy (recommended for first timer): stick to the super touristy Japan Golden Route (Tokyo, Kyoto, and Osaka) \n
+  Easy: just hop off at the station and start exploring! \n
+  Medium: require a little timing and schedule planning \n
+  Hard: rare/no public transport, long transport duration''')
+
+
 # Final
 st.write('#####')
 st.write('Ready to see your itineraries?')
