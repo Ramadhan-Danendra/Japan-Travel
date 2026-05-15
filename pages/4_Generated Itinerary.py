@@ -81,10 +81,11 @@ with RC2:
 # Difficulty
 st.write('#####')
 st.write('**Difficulty**')
-Difficulty = st.segmented_control('*your maximum difficulty tolerance*', ['Very easy', 'Easy', 'Hard'])
+Difficulty = st.segmented_control('*your maximum difficulty tolerance*', ['Very easy', 'Easy', 'Medium', 'Hard'])
 with st.container(border=True):
-  st.caption('''Very easy (recommended for first timer): super touristy place, including Greater Tokyo, Kansai, and the Golden Route (Tokyo-Kyoto-Osaka) \n
-  Easy: frequent public transport \n
+  st.caption('''Very easy (recommended for first timer): stick to the super touristy Japan Golden Route (Tokyo, Kyoto, and Osaka) \n
+  Easy: just hop off at the station and start exploring! \n
+  Medium: require a little timing and schedule planning \n
   Hard: rare/no public transport, long transport duration''')
 
 
