@@ -44,7 +44,7 @@ if 'Mar' in Month or 'Apr' in Month or 'May' in Month:
   if 'Mar' in Month: cb += ['Early-Mid Mar','Late Mar']
   if 'Apr' in Month: cb += ['Early Apr','Mid Apr','Late Apr']
   if 'May' in Month: cb += ['Early May','Mid-Late May']
-  CB = st.segmented_control('Do you have the detailed times?', cb, selection_mode="multi")
+  CB = st.segmented_control("Do you have the detailed times? Ignore this if you aren't interested in cherry blossom", cb, selection_mode="multi")
   st.caption('Note: fall foliage time can change every year. The data in this website are based on average fall foliage time from Japan Meteorological Corporation')
   if 'Early-Mid Mar' in CB or 'Mid-Late May' in CB:
     st.caption('*sorry you cannot see cherry blossom in early-mid March or mid-late May*')
@@ -54,7 +54,7 @@ if 'Oct' in Month or 'Nov' in Month or 'Dec' in Month:
   ff = []
   for i in ['Oct','Nov','Dec']:
     if i in Month: ff += ['Early '+i,'Mid '+i,'Late '+i]
-  FF = st.segmented_control('Do you have the detailed times?', ff, selection_mode="multi")
+  FF = st.segmented_control("Do you have the detailed times? Ignore this if you aren't interested in fall foliage", ff, selection_mode="multi")
   st.caption('Note: fall foliage time can change every year. The data in this website are based on average fall foliage time from Japan Meteorological Corporation')
   if 'Late Dec' in FF:
     st.caption('*sorry you cannot see fall foliage in late December*')
